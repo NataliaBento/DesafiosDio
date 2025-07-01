@@ -1,0 +1,305 @@
+@import url(./reset.css);
+
+@font-face {
+    font-family: Roboto;
+    src: local(), url(./Roboto/static/Roboto-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Roboto; 
+    src: local(), url(../Roboto/static/Roboto-Thin.ttf); 
+    font-weight: lighter;
+}
+
+body {
+    font-family: Roboto;
+    background: rgba(0, 0, 0, 0.940);
+    color: white;
+    margin: 0 5vh 0 5vh;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.thin-text {
+    font-weight: lighter;
+    color: rgba(150, 150, 150, 0.836);
+    margin: 0.7vh;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a8a8a891;
+}
+
+/* header */
+
+#header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 8vh;
+    width: auto;
+    position: relative;
+    flex: 0 1 auto;
+}
+#logo {
+    position: relative;
+    left: 0.5vh;
+    top: 0.5vh;
+}
+
+#logo img {
+    margin-top: 1vh;
+    width: 16.5vh;
+    height: 3.5vh;
+}
+
+#search-bar {
+    margin: 1vh 0 1vh 1vh;
+    height: 4.2vh;
+    width: 65vh;
+    border: 1px solid rgba(87, 87, 87, 0.555);
+    border-radius: 2rem 0 0 2rem;
+    position: relative;
+    left: 18.5vh;
+}
+
+#lupa {
+    margin: 1vh 1vh 1vh 0;
+    position: relative;
+    left: 2.8vh;
+    width: 8vh;
+    height: 4.2vh;
+    background: rgba(87, 87, 87, 0.253);
+    background-image: url(./Imagens/lupa.png);
+    border: 1px solid rgba(87, 87, 87, 0.555);
+    border-radius: 0 2rem 2rem 0;
+}
+
+#lupa img {
+    position: relative;
+    top: 0.7vh;
+    left: 2.5vh;
+    width: 50%;
+}
+
+#microfone {
+    position: relative;
+    right: 13.5vh;
+    margin-top: 0.4vh;
+}
+
+#microfone img {
+    width: 6vh;
+    height: 5.2vh;
+}
+
+#upload img{
+    position: relative;
+    left: 15vh;
+    height: 5vh;
+    margin-top: 1vh;
+}
+
+#user img{
+    position: relative;
+    height: 4.7vh;
+    margin-top: 1vh;
+}
+
+#video-principal iframe{
+    width: 125vh;
+    height: 70vh;
+    margin: 1vh 0 2.5vh 0;
+    position: relative;
+    flex: 1 1 auto;
+}
+
+#botoes {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    height: 6vh;
+    width: 135vh;
+    position: relative;
+    background: rgba(0, 0, 255, 0);
+    flex: 1 1 auto;
+    margin: 2vh 2vh 4vh 0;
+    gap: 0.6vh;
+}
+
+.item {  
+    width: 6rem;
+    position: relative;
+    top: 2vh;
+    margin: 0 0.5vh 0 0.5vh;
+}
+
+#channel {
+    position: relative;
+    border-radius: 50%;
+    background-image: url(Imagens/gaveta_profile.jpg);
+    background-size: cover;
+    width: 6vh;
+    height: 6vh;
+}
+
+#Nome-escritos {
+    position: relative;
+    width: 15vh;
+    font-size: small;
+    flex-flow: row nowrap;
+}
+
+
+#inscrever {
+    width: 20vh;
+    height: 5.5vh;
+    align-content: center;
+    background: red;
+    color: white;
+    padding: 0.4vh;
+    text-align: center;
+}
+
+
+#inscrever:hover {
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.8);
+}
+
+
+#like {
+    width: 3.1vh;
+    position: relative;
+    left: 2vh;
+    background: rgba(255, 0, 0, 0.589);
+    box-shadow: 1px 1px 1vh rgb(102, 35, 35);
+}
+
+#like-quantia {
+    position: relative;
+    left: 1vh;
+}
+
+#like:hover {
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.8);
+}
+
+#like-quantia:hover {
+    cursor: pointer;
+}
+
+#deslike {
+    width: 3.5vh;
+    position: relative;
+    background: rgba(255, 0, 0, 0.589);
+    box-shadow: 1px 1px 1vh rgb(102, 35, 35);
+}
+
+#deslike-quantia:hover {
+    cursor: pointer;
+}
+
+#deslike img {
+    position: relative;
+    left: 0.3vh;
+    top: 0.2vh;
+}
+
+#deslike:hover {
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.8);
+}
+
+#compartilhar {
+    width: 3.5vh;
+    position: relative;
+    background: rgba(255, 0, 0, 0.589);
+    box-shadow: 1px 1px 1vh rgb(102, 35, 35);
+}
+
+#compartilhar img {
+    position: relative;
+    left: 0.2vh;
+    top: 0.1vh;
+}
+
+#compartilhar:hover {
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.8);
+}
+
+#download {
+    width: 3.5vh;
+    position: relative;
+    left: 1vh;
+    background: rgba(255, 0, 0, 0.589);
+    box-shadow: 1px 1px 1vh rgb(102, 35, 35);
+}
+
+#download img{
+    position: relative;
+    left: 0.3vh;
+}
+
+#download:hover {
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.8);
+}
+
+#download2{
+    position: relative;
+    left: 1vh;
+}
+
+
+#zuj {
+   align-items: flex-end;
+}
+
+
+#recomendados-coluna1 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 5vh;
+    position: absolute;
+    right: 65vh;
+    top: 3vh;
+    margin-top: 6vh;
+    gap: 3vh;
+}
+
+#video-recomendado {
+    width: 15vh;
+    height: 10vh;
+}
+
+
+#recomendados-coluna2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20vh;
+    position: absolute;
+    right: 10vh;
+    top: 2.5vh;
+    margin-top: 6vh;
+    gap: 8.5vh;
+}
+
+
