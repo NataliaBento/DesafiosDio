@@ -10,18 +10,33 @@ Classificação:
 - Media acima de 7, passou de semestre;
 */
 
-nota1 = 1
-
-nota2 = 10
-
-nota3 = 2
-
-media = (nota1 + nota2 + nota3) / 3
-
-if (media < 5) {
-    console.log(`O launo teve media: ${media}, ele está REPROVADO`)
-}else if (media > 5 && media<=7){
-    console.log(`O aluno teve a media: ${media}, ele está em RECUPERAÇÃO`)
-}else if (media > 7){
-    console.log(`O aluno teve média: ${media} e foi aprovado por media`)
+function media(nota1, nota2, nota3){
+    return (nota1 + nota2 + nota3) / 3
 }
+
+function classificarMedia(media){
+        if (media < 5) {
+        return (`O Aluno teve media: ${media}, ele está REPROVADO`)
+    }else if (media > 5 && media<=7){
+        return (`O aluno teve a media: ${media}, ele está em RECUPERAÇÃO`)
+    }else if (media > 7){
+        return (`O aluno teve média: ${media} e foi aprovado por media`)
+    }
+}
+
+(function () {
+    let nota1 = 10
+
+    let nota2 = 10
+
+    let nota3 = 10
+
+    let resultadoMedia= media(nota1, nota2, nota3);
+    let resultadoFinal= classificarMedia(resultadoMedia);
+
+    console.log(resultadoFinal)
+})();
+
+
+
+

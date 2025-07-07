@@ -14,18 +14,30 @@ IMC em adultos Condição:
 
 */
 
-let peso = 80
-let altura = 1.56
-let imc = peso / Math.pow(altura, 2);
-
-if (imc < 18.5) {
-    console.log(`Seu IMC é de ${imc.toFixed(2)}, você está abaixo do peso!`)
-} else if (imc >= 18.5 && imc <= 25){
-    console.log(`Seu IMC é de ${imc.toFixed(2)}, você está com seu peso normal!`)
-}else if (imc > 25 && imc <= 30){
-    console.log(`Seu IMC é de ${imc.toFixed(2)}, você está acima do peso!`)
-}else if (imc > 30 && imc <= 40){
-    console.log(`Seu IMC é de ${imc.toFixed(2)}, você está obeso!`)
-}else if (imc > 40){
-    console.log(`Seu imc é de: ${imc.toFixed(2)}, você está com obesidade grave`)
+function calculoImc (peso, altura){
+    return peso / Math.pow(altura, 2);
 }
+
+function classificarIMC (imc){
+        if (imc < 18.5) {
+        return (`Seu IMC é de ${imc.toFixed(2)}, você está abaixo do peso!`)
+    } else if (imc >= 18.5 && imc <= 25){
+        return (`Seu IMC é de ${imc.toFixed(2)}, você está com seu peso normal!`)
+    }else if (imc > 25 && imc <= 30){
+        return (`Seu IMC é de ${imc.toFixed(2)}, você está acima do peso!`)
+    }else if (imc > 30 && imc <= 40){
+        return (`Seu IMC é de ${imc.toFixed(2)}, você está obeso!`)
+    }else if (imc > 40){
+        return (`Seu imc é de: ${imc.toFixed(2)}, você está com obesidade grave`)
+    }
+}
+
+function main(){
+    const peso = 60;
+    const altura = 1.56;
+
+    const imc = calculoImc(peso, altura);
+    console.log(classificarIMC(imc));
+}
+
+main();

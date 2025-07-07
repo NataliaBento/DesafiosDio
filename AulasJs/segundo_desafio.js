@@ -7,6 +7,10 @@
 // 4- Gasto médio de combustível do carro por KM;
 // 5 - Distância em KM da viagem;
 
+function CalculolitrosCosumidos (distanciaEmKm, kmPorLitros){
+    return distanciaEmKm / kmPorLitros;
+}
+
 const precoEtanol = 5.79;
 
 const precoGasolina = 6.66;
@@ -16,7 +20,7 @@ const distanciaEmKm = 100;
 
 const tipoCombustível = 'Etanol';
 
-const litrosCosumidos = distanciaEmKm / kmPorLitros;
+const litrosCosumidos = CalculolitrosCosumidos(distanciaEmKm, kmPorLitros)
 
 if (tipoCombustível === "Etanol"){
     const valorGasto = litrosCosumidos * precoEtanol
